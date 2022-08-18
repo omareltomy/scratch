@@ -10,17 +10,7 @@ const FetchUsers = () => {
   const dbRef = ref(getDatabase());
 
   useEffect(() => {
-    get(child(dbRef, `users`))
-      .then((snapshot) => {
-        if (snapshot.exists()) {
-          setData(snapshot.val());
-        } else {
-          console.log("No data available");
-        }
-      })
-      .catch((error) => {
-        console.error(error);
-      });
+    updateUi();
   }, [updateData]);
   const updateData = () => {
     update(ref(db, "users"), {
