@@ -6,7 +6,7 @@ const dbRef = ref(getDatabase());
 export function addUser() {}
 const FetchUsers = () => {
   const [data, setData] = useState([]);
-
+  const db = getDatabase();
   const dbRef = ref(getDatabase());
 
   useEffect(() => {
