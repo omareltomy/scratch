@@ -1,9 +1,25 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@tailwind utilities;
+:root {
+  --primary-midnight-100: #1d1c2f;
+  --primary-midnight-50: #5b70ff;
+  --secondary-sea-50: #6d64ff;
+}
+@font-face {
+  font-family: "heroNew";
+  src: url("/fonts/heroNewRegular.woff2") format("woff2");
+}
+@font-face {
+  font-family: "heroNewBold";
+  src: url("/fonts/heroNewExtrabold.woff2") format("woff2");
+}
 html,
 body {
   padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family: "heroNew";
 }
 
 a {
@@ -14,13 +30,69 @@ a {
 * {
   box-sizing: border-box;
 }
+/* some basic breakpoints for responsive design  */
 
-@media (prefers-color-scheme: dark) {
+@media (min-width: 300px) {
+  body,
   html {
-    color-scheme: dark;
+    font-size: 40% !important;
   }
-  body {
-    color: white;
-    background: black;
+}
+@media (min-width: 400px) {
+  body,
+  html {
+    font-size: 50% !important;
+  }
+}
+@media (min-width: 700px) {
+  body,
+  html {
+    font-size: 70% !important;
+  }
+}
+@media (min-width: 1000px) {
+  body,
+  html {
+    font-size: 80% !important;
+  }
+}
+@media (min-width: 1200px) {
+  body,
+  html {
+    font-size: 100% !important;
+  }
+}
+@media (min-width: 1400px) {
+  body,
+  html {
+    font-size: 110% !important;
+  }
+}
+@media (min-width: 1700px) {
+  body,
+  html {
+    font-size: 125% !important;
+  }
+}
+
+/* ---- scrollbar styles ----- */
+
+@layer utilities {
+  .scrollbar::-webkit-scrollbar {
+    width: 12px;
+  }
+
+  .scrollbar::-webkit-scrollbar-track {
+    border-radius: 100vh;
+    background: #bac3ff;
+  }
+
+  .scrollbar::-webkit-scrollbar-thumb {
+    background: #5b70ff;
+    border-radius: 100vh;
+  }
+
+  .scrollbar::-webkit-scrollbar-thumb:hover {
+    background: #314cff;
   }
 }
