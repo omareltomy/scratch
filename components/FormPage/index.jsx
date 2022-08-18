@@ -135,7 +135,7 @@ const FormPage = () => {
                 <label className="ml-2 ">Keep me signed in</label>
               </div>
               <button className="bg-primary-midnight-50 hover:bg-[#3d57ff]  px-10 py-2 text-2xl rounded-full text-white transition-[1s]">
-                Sign up
+                Sign in
               </button>
             </div>
           </form>
