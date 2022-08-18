@@ -8,6 +8,7 @@ import React, {
 import { BiDotsVerticalRounded } from "react-icons/bi";
 import { getDatabase, ref, set, remove, get, child } from "firebase/database";
 import { AiFillDelete, AiOutlineDelete } from "react-icons/ai";
+import { app } from "../../src/firebaseConfig";
 
 const UserRow = ({
   firstName,
@@ -22,7 +23,7 @@ const UserRow = ({
   const inputStyles =
     "w-full bg-gray-50 text-[0.8rem] border-none rounded-md pl-0 focus:pl-2 capitalize";
   const liStyles = "w-[7rem] my-1 border-b-[1px] border-gray-300  ";
-  const db = getDatabase();
+  const db = getDatabase(app);
   const dbRef = ref(getDatabase());
   const update = (e) => {
     {

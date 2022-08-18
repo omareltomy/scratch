@@ -1,7 +1,8 @@
 import React, { useEffect, useReducer, useState } from "react";
 import UserRow from "./UserRow";
 import { getDatabase, ref, child, get, set, update } from "firebase/database";
-const db = getDatabase();
+import { app } from "../../src/firebaseConfig";
+const db = getDatabase(app);
 const dbRef = ref(getDatabase());
 export function addUser() {}
 const FetchUsers = () => {
